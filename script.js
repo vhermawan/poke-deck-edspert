@@ -1,5 +1,5 @@
 let currentPage = 1;
-const limit = 20; // Number of items per page
+const limit = 10; // Number of items per page
 let loading = false;
 
 function showLoadingIndicator() {
@@ -18,20 +18,25 @@ function loadPokemonDetails(pokemonUrl) {
 }
 
 function displayPokemon(pokemon) {
-	const pokemonDiv = $('<div class="pokemon"></div>');
-	const title = $("<h2></h2>").text(pokemon.name);
-	const image = $("<img>").attr("src", pokemon.sprites.front_default);
+	const pokemonDiv = $(
+		'<div class="border-solid border-2 p-4 rounded-lg h-min-content"></div>'
+	);
+	const title = $(`<h2 class="font-bold capitalize text-center" ></h2>`).text(
+		pokemon.name
+	);
+	const image = $(`<img class="item-center m-auto w-[200px] h-[200px]">`).attr(
+		"src",
+		pokemon.sprites.front_default
+	);
 
-	// Prepare skills and types
 	const skills = pokemon.abilities
 		.map((ability) => ability.ability.name)
 		.join(", ");
 	const types = pokemon.types.map((type) => type.type.name).join(", ");
 
-	// Prepare stats
 	let statsHtml = "<ul>";
 	pokemon.stats.forEach((stat) => {
-		statsHtml += `<li>${stat.stat.name}: ${stat.base_stat}</li>`;
+		statsHtml += `<li class="capitalize">${stat.stat.name}: ${stat.base_stat}</li>`;
 	});
 	statsHtml += "</ul>";
 
