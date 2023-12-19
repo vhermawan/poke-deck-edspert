@@ -39,15 +39,17 @@
   <section class="m-auto p-10">
     <div id="pokemon-list" class="grid grid-cols-4 gap-4   gap-4 p-4 md:p-0"></div>
   </section>
-  <div
-    id="loading-indicato"
-    class="inline-block hidden h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-    role="status">
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Loading...</span
-    >
-  </div>
+  <section>
+    <div
+      id="loading-indicator"
+      class="inline-block hidden h-8 w-8 animate-spin rounded-full border-4  m-auto  border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+      role="status">
+      <span
+        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)] m-auto"
+        >Loading...</span
+      >
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>

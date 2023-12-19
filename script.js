@@ -1,5 +1,5 @@
 let currentPage = 1;
-const limit = 10; // Number of items per page
+const limit = 8; // Number of items per page
 let loading = false;
 
 function showLoadingIndicator() {
